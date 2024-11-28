@@ -1,0 +1,36 @@
+<androidx.drawerlayout.widget.DrawerLayout android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"> <!-- Le DrawerLayout permet d'ajouter un menu latéral qui peut être ouvert ou fermé par l'utilisateur pour naviguer entre les écrans. -->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!-- Content de MainActivity -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Bienvenue à l'application UI"/>
+        <Button
+            android:id="@+id/btnNextActivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Passer à la prochaine activité"
+            app:layout_constraintTop_toBottomOf="@id/tvTitle"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginTop="16dp"/> <!-- Ce bouton est utilisé pour rediriger l'utilisateur vers la prochaine activité. Pensez à bien gérer les clics pour améliorer l'expérience utilisateur. -->
+
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        app:menu="@menu/nav_menu"/> <!-- NavigationView est utilisé pour afficher le menu de navigation dans le DrawerLayout. Pensez à bien configurer les éléments de menu. -->
+</androidx.drawerlayout.widget.DrawerLayout>
