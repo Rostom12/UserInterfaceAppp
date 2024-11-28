@@ -22,8 +22,8 @@ class BookAdapter(private val bookList: List<SecondActivity.Book>) :
 
     override fun onBindViewHolder(holder: BookViewHolder, position: Int) {
         val book = bookList[position]
-      //  holder.titleTextView.text = book.title // Ce code lie les données de l'objet `Book` (titre) au `TextView` de chaque élément du RecyclerView.
-        //holder.authorTextView.text = book.author
+       holder.titleTextView.text = book.title // Ce code lie les données de l'objet `Book` (titre) au `TextView` de chaque élément du RecyclerView.
+     holder.authorTextView.text = book.author
     }
 
     override fun getItemCount() = bookList.size
